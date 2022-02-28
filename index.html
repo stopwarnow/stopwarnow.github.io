@@ -16,6 +16,9 @@
       height: 100%;
       width: 100%;
     }
+    #lnkDonate {
+      font-weight: bold;
+    }
     #btnAction {
       background: #efa700;
       color: #0057b7;
@@ -84,6 +87,10 @@
   </div>
 
   <div id="content">
+    <h1 style="font-weight: normal">
+      We fight with <span style="font-weight: bold; color: #0057b7">Bytes</span><br/>
+      Not with <span style="text-decoration: line-through">Bombs & Bullets</span>
+    </h1>
     <div id="txtCounter"></div>
     <button id="btnAction" onclick="launchCannon()">
       <span class="front">
@@ -99,7 +106,8 @@
 
     <div>
       <br/>
-      Please consider <a href="https://www.icrc.org/en/donate/ukraine" target="_blank" rel="noopener noreferrer">Donate</a> to the International Committee of the Red Cross.
+      Please consider <a id="lnkDonate" href="https://www.icrc.org/en/donate/ukraine" target="_blank" rel="noopener noreferrer">Donating</a><br/>
+      to the International Committee of the Red Cross.
     </div>
   </div>
   <script src="js/app.js"></script>
