@@ -1,2 +1,4 @@
 title,method,host,port,path
 Sputnik,POST,sputnik.by,443,{rand}
+Belta,POST,www.belta.by,443,{rand}
+Zarya,POST,zarya.by,443,{rand}

