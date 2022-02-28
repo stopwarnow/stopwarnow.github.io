@@ -48,6 +48,9 @@
     #flag .blue {background: #0057b7;}
     #flag .yellow {background: #ffd700;}
 
+    #btnContainer {
+        margin: 20px 0;
+    }
     #btnAction {
       background: #efa700;
       color: #0057b7;
@@ -123,12 +126,13 @@
     }
     #txtCounter {
       padding: 20px;
+      height: 24px;
     }
     #mbInput {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
     #mbInput span:first-child {
         margin-right: 10px;
@@ -160,22 +164,24 @@
       We fight with <span style="font-weight: bold; color: #0057b7">Bytes</span><br/>
       Not with <span style="text-decoration: line-through">Bombs & Bullets</span>
     </h1>
-    <div id="txtCounter"></div>
+    <div id="btnContainer">
+        <button id="btnAction" onclick="launchCannon()">
+        <span class="front">
+            Launch
+        </span>
+        </button>
+        <button id="btnStop" style="display:none" onclick="stopCannon()">
+        <span class="front">
+            Stop
+        </span>
+        </button>
+    </div>
     <label id="mbInput">
         <span>Attack size: </span>
         <input id="mb" type="range" min="1" max="100" value="100" />
         <span class="val"></span>
     </label>
-    <button id="btnAction" onclick="launchCannon()">
-      <span class="front">
-        Launch
-      </span>
-    </button>
-    <button id="btnStop" style="display:none" onclick="stopCannon()">
-      <span class="front">
-        Stop
-      </span>
-    </button>
+    <div id="txtCounter"></div>
     <pre id="txtStats"></pre>
 
     <div>
