@@ -46,7 +46,7 @@
         max-width: 7.5vh;
     }
     #flag .blue {background: #0057b7;}
-    #flag .yellow {background: #ffd700;}
+    #flag .yellow {background: #ffd700; position: relative}
 
     #btnContainer {
         margin: 20px 0;
@@ -141,6 +141,14 @@
         margin-left: 10px;
         width: 70px;
     }
+    #lnkWhat {
+      position: absolute;
+      color: #0057b7;
+      font-size: 14px;;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   </style>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script> -->
 </head>
@@ -156,7 +164,9 @@
   </div>
   <div id="flag">
       <div class="blue"></div>
-      <div class="yellow"></div>
+      <div class="yellow">
+        <a id="lnkWhat" href="https://github.com/stopwarnow/stopwarnow.github.io#what-is-this" title="What is this?" target="_blank" rel="noopener noreferrer">What is this?</a>
+      </div>
   </div>
 
   <div id="content">

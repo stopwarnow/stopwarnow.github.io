@@ -13,13 +13,21 @@ This is a tool that allows anyone with a web browser and internet connectivity t
 By simply visit the site, click Launch, the tool will send traffics to one of many pre-defined targets.
 
 
+## Are there any other ways to help?
+
+Absolutely, please consider donating to the [International Committee of the Red Cross for Ukraine Crisis](https://www.icrc.org/en/donate/ukraine).
+
 ## Q&As
 
 ### Q: Is this safe?
 A: Yes, it does not send any of sensitive data.
 
-### Does this consume a lot of data?
+### Q: Are you affiliated with any official organisations?
+A: No, we are only affiliated with peace and doing the right things.
+
+### Q: Does this consume a lot of data?
 A: No, each request sent is minimal. However, you can limit the maximum amount of data you would like to donate to the cause.
 
 ### Q: How do I add more targets?
 A: Fork, then Submit a pull request with your new target added to `attacklist.csv`.
+
