@@ -31,3 +31,7 @@ A: No, each request sent is minimal. However, you can limit the maximum amount o
 ### Q: How do I add more targets?
 A: Fork, then Submit a pull request with your new target added to `attacklist.csv`.
 
+### Q: Do you collect / sell / share any data?
+A: No, we do not know who you are using our tool and we do not share it with any 3rd party.
+We do use a tool called [Microsoft Clarity](https://clarity.microsoft.com/) configured with Privacy mode (no Cookie - GDPR compliance) so that we can understand basic stats such as how many people visits the page, all in aggregated mode.
+
