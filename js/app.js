@@ -54,7 +54,7 @@
         function fire() {
           counter.total++;
           fetch(`https://${target.host}:${target.port}/${(target.path || '').replace('{rand}', rand)}`, {
-            method: "POST",
+            method: target.method || 'GET',
             mode: "no-cors",
           }).finally(function () {
             counter.hit++;
