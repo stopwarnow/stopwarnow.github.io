@@ -10,7 +10,7 @@ URL: https://stopwarnow.github.io/
 
 This is a tool that allows anyone with a web browser and internet connectivity to easily participate in a global distributed denial of service attack, aiming to disable key Russian propaganda sites and services supporting the [Russian Invasion of Ukraine](https://en.wikipedia.org/wiki/Russo-Ukrainian_War).
 
-By simply visit the site, click Launch, the tool will send traffics to one of many pre-defined targets.
+By simply visit the site, click Launch, the tool will send traffics to one of many [pre-defined targets](./attacklist.csv).
 
 
 ## Are there any other ways to help?
