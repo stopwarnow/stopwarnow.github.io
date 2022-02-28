@@ -27,7 +27,7 @@
           .map((i) => {
             const row = i.split(",");
             return {
-              host: row[0],
+              method: row[0],
               host: row[1],
               port: row[2],
               path: row[3],
@@ -49,11 +49,13 @@
       function fireRequests() {
         const target = targets[Math.floor(Math.random() * targets.length)];
 
-        var rand = Math.floor(Math.random() * 1000000) + new Date().getTime();
-        refreshCounter();
         
         function fire() {
+          var rand = Math.floor(Math.random() * 1000000) + new Date().getTime();
+
           counter.total++;
+          refreshCounter();
+
           fetch(`https://${target.host}:${target.port}/${(target.path || '').replace('{rand}', rand)}`, {
             method: target.method || 'GET',
             mode: "no-cors",
