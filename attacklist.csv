@@ -1,2 +1,2 @@
-method,host,port,path
-POST,sputnik.by,443,{rand}
+title,method,host,port,path
+Sputnik,POST,sputnik.by,443,{rand}

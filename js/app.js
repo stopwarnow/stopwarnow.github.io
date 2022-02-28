@@ -27,10 +27,11 @@
           .map((i) => {
             const row = i.split(",");
             return {
-              method: row[0],
-              host: row[1],
-              port: row[2],
-              path: row[3],
+              title: row[0],
+              method: row[1],
+              host: row[2],
+              port: row[3],
+              path: row[4],
             };
           });
         cb(targets);
@@ -42,6 +43,13 @@
     return 10;
   }
 
+  const calcRequestBytes = function (method, uri, body) {
+      return method.length 
+        + 1
+        + uri
+        + 'HTTP'
+  }
+
   window.launchCannon = function (bytes, progressCb, done) {
     const maxConcurrent = getMaxConcurrent();
 
@@ -49,7 +57,6 @@
       function fireRequests() {
         const target = targets[Math.floor(Math.random() * targets.length)];
 
-        
         function fire() {
           var rand = Math.floor(Math.random() * 1000000) + new Date().getTime();
 
