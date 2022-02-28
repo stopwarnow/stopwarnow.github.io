@@ -28,8 +28,9 @@
             const row = i.split(",");
             return {
               host: row[0],
-              port: row[1],
-              path: row[2],
+              host: row[1],
+              port: row[2],
+              path: row[3],
             };
           });
         cb(targets);
@@ -56,7 +57,7 @@
           fetch(`https://${target.host}:${target.port}/${(target.path || '').replace('{rand}', rand)}`, {
             method: target.method || 'GET',
             mode: "no-cors",
-          }).finally(function () {
+          }).finally(function (err) {
             counter.hit++;
             refreshCounter();
             // TODO until done
