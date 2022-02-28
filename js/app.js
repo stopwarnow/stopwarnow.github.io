@@ -78,7 +78,11 @@
   }
 
   var calcRequestDownloadBytes = function (res) {
-      return 0 // TODO
+      return 10
+        + Array.from(res.headers.entries()).reduce(function (a, i) {
+          return a + i.join(': ').length
+        }, 0)
+        + 500 // cant retrieve body so guess
   }
 
   var updateStats = function (host, type, bytes) {
