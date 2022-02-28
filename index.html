@@ -107,6 +107,19 @@
     #txtCounter {
       padding: 20px;
     }
+    #mbInput {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    #mbInput span:first-child {
+        margin-right: 10px;
+    }
+    #mbInput .val {
+        margin-left: 10px;
+        width: 70px;
+    }
   </style>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script> -->
 </head>
@@ -131,6 +144,11 @@
       Not with <span style="text-decoration: line-through">Bombs & Bullets</span>
     </h1>
     <div id="txtCounter"></div>
+    <label id="mbInput">
+        <span>Attack size: </span>
+        <input id="mb" type="range" min="1" max="100" value="100" />
+        <span class="val"></span>
+    </label>
     <button id="btnAction" onclick="launchCannon()">
       <span class="front">
         Launch
