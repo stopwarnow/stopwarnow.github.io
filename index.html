@@ -28,7 +28,7 @@
       height: 100%;
       width: 100%;
     }
-    #lnkDonate {
+    .lnkCta {
       font-weight: bold;
     }
     #flag {
@@ -101,18 +101,22 @@
     }
     #content {
       padding: 15px;
-      padding-top: 100px;
+      padding-top: 120px;
       box-sizing: border-box;
-      height: 100%;
+      min-height: 100%;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
     }
+    #content > h1 {
+        margin-top: auto;
+    }
     .social-share {
+      padding-top: 25px;
+      margin-top: auto;
       text-align: center;
-      position: fixed;
       bottom: 16px;
     }
     .lnkSocialShare {
@@ -197,9 +201,10 @@
 
     <div>
       <br/>
-      Please consider <a id="lnkDonate" href="https://www.icrc.org/en/donate/ukraine" target="_blank" rel="noopener noreferrer">Donating</a>
+      Please consider <a class="lnkCta" href="https://www.icrc.org/en/donate/ukraine" target="_blank" rel="noopener noreferrer">Donating</a>
       to the International Committee of the Red Cross.
       <br/><br/>
+      And join the <a class="lnkCta" href="https://t.me/itarmyofurraine" target="_blank" rel="noopener noreferrer">IT Army of Ukraine</a> to contribute to the effort in cyberspace.
     </div>
     <div class="social-share">
       Spread the word
