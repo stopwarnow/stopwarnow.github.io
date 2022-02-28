@@ -19,7 +19,7 @@
       cursor: pointer;
       outline-offset: 4px;
     }
-    .front {
+    #btnAction .front {
       display: block;
       padding: 12px 42px;
       border-radius: 12px;
@@ -29,6 +29,27 @@
       transform: translateY(-6px);
     }
     #btnAction:active .front {
+      transform: translateY(-2px);
+    }
+    #btnStop {
+      background: #9A090C;
+      color: #fff;
+      border-radius: 12px;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      outline-offset: 4px;
+    }
+    #btnStop .front {
+      display: block;
+      padding: 12px 42px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+      color: #fff;
+      background: #DA291C;
+      transform: translateY(-6px);
+    }
+    #btnStop:active .front {
       transform: translateY(-2px);
     }
     #content {
@@ -52,6 +73,11 @@
     <button id="btnAction" onclick="launchCannon()">
       <span class="front">
         Launch
+      </span>
+    </button>
+    <button id="btnStop" style="display:none" onclick="stopCannon()">
+      <span class="front">
+        Stop
       </span>
     </button>
   </div>
