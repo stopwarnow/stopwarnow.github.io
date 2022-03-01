@@ -10,7 +10,7 @@ Bonkypay.com,POST,bonkypay.com,443,{rand}
 Cleanbtc.ru,POST,cleanbtc.ru,443,{rand}
 Council.gov.ru,POST,council.gov.ru,443,{rand}
 Data.gov.ru,POST,data.gov.ru,443,{rand}
-FAfT,tourism.gov.ru,443,{rand}
+FAfT,POST,tourism.gov.ru,443,{rand}
 FSB,POST,www.fsb.ru,80,{rand}
 GocMinenergo,POST,minenergo.gov.ru,443,{rand}
 Gov.ru,POST,gov.ru,80,{rand}
@@ -34,13 +34,13 @@ Radiobrestfm.by,POST,radiobrestfm.by,443,{rand}
 Radiomir.by,POST,radiomir.by,443,{rand}
 Radiostalica.by,POST,radiostalica.by,443,{rand}
 Radiusfm.by,POST,radiusfm.by,443,{rand}
-Roskomnadzor,eais.rkn.gov.ru,443,{rand}
-Rosstat,rosstat.gov.ru,443,{rand}
+Roskomnadzor,POST,eais.rkn.gov.ru,443,{rand}
+Rosstat,POST,rosstat.gov.ru,443,{rand}
 SB,POST,www.sb.by,443,{rand}
 Slonves.by,POST,www.slonves.by,443,{rand}
 Sputnik,POST,sputnik.by,443,{rand}
 Tass.ru,POST,tass.ru,443,{rand}
 TVR,POST,www.tvr.by,443,{rand}
 Tvrmogilev,POST,www.tvrmogilev.by,443,{rand}
-Zakupki,POST,zakupupki,gov,80,{rand}
+Zakupki,POST,zakupupki.gov,80,{rand}
 Zarya,POST,zarya.by,443,{rand}
