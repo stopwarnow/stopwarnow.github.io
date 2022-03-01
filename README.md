@@ -8,14 +8,21 @@ URL: https://stopwarnow.github.io/
 
 ## What is this?
 
-This is a tool that allows anyone with a web browser and internet connectivity to easily participate in a global distributed denial of service attack, aiming to disable key Russian propaganda sites and services supporting the [Russian Invasion of Ukraine](https://en.wikipedia.org/wiki/Russo-Ukrainian_War).
+This site has been inspired by the Ukraine government’s call for IT professionals to help assist against the disruption of Russian propaganda.
 
-By simply visit the site, click Launch, the tool will send traffics to one of many [pre-defined targets](./attacklist.csv).
+Built by Australian Data & Technology professionals, motivated to use their skills to help support the Ukraine, and find a way to allow non-technical people to help support the cause. It is an entirely anonymous and encrypted site that allows anyone with a web browser and internet connectivity to easily participate in disabling and blocking key Russian propaganda sites and services supporting the [Russian invasion of Ukraine](https://en.wikipedia.org/wiki/Russo-Ukrainian_War).
 
+It is open source and 100% transparent and is aiming to help manage the misinformation that the Russian people are being fed.
+
+It is simple. Anyone with a web browser, and internet connectivity can participate and show your support. Simply click the Launch button and leave this running in the background whilst most of us go safely about our days. This tool has been specifically built to only target Russian [pre-defined targets and propaganda sites](./attacklist.csv), and will not interfere with any Russian civilian sites.
+
+All we are donating is our data, of which it requires a minimal outlay, and you are donating in a new way. You can even set the maximum amount of data you want to donate.
 
 ## Are there any other ways to help?
 
-Absolutely, please consider donating to the [International Committee of the Red Cross for Ukraine Crisis](https://www.icrc.org/en/donate/ukraine).
+Absolutely.
+- Please consider donating to the [International Committee of the Red Cross for Ukraine Crisis](https://www.icrc.org/en/donate/ukraine). 
+- For other technically inclined people out there who want to contribute please consider joining the [IT Army of Ukraine](https://t.me/itarmyofukraine2022).
 
 ## Q&As
 
