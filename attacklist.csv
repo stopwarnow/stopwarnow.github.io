@@ -1,5 +1,5 @@
-Title,METHOD,host,port,path
-024.By,POST,www.024.by,443,{rand}
+title,method,host,port,path
+024.by,POST,www.024.by,443,{rand}
 24ecp,POST,www.24ecp.ru,80,{rand}
 Alfaradio.By,POST,alfaradio.by,443,{rand}
 Astralnalog,POST,www.astralnalog.ru,80,{rand}
