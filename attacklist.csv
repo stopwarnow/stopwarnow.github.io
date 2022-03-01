@@ -1,3 +1,4 @@
+title,method,host,port,path
 024.by,POST,www.024.by,443,{rand}
 alfaradio.by,POST,alfaradio.by,443,{rand}
 Belarus.BY,POST,www.belarus.by,443,{rand}
@@ -10,8 +11,6 @@ cleanbtc.ru,POST,cleanbtc.ru,443,{rand}
 council.gov.ru,POST,council.gov.ru,443,{rand}
 data.gov.ru,POST,data.gov.ru,443,{rand}
 FSB,POST,www.fsb.ru,80,{rand}
-gov.ru,POST,gov.ru,443,{rand}
-government.gov.ru,government.gov.ru,Government,443,{rand}
 grodnonews.by,POST,grodnonews.by,443,{rand}
 interfax.ru,POST,interfax.ru,443,{rand}
 KGB,POST,kgb.by,80,{rand}
@@ -30,9 +29,22 @@ SB,POST,www.sb.by,443,{rand}
 slonves.by,POST,www.slonves.by,443,{rand}
 Sputnik,POST,sputnik.by,443,{rand}
 tass.ru,POST,tass.ru,443,{rand}
-title,method,host,port,path
 TVR,POST,www.tvr.by,443,{rand}
 tvrmogilev.by,POST,www.tvrmogilev.by,443,{rand}
 zakupki.gov.ru,POST,zakupki.gov.ru,443,{rand}
 Zarya,POST,zarya.by,443,{rand}
 zarya.by,POST,zarya.by,443,{rand}
+Tvrmogilev,POST,www.tvrmogilev.by,443,{rand}
+Zarya,POST,zarya.by,443,{rand}
+Government,POST,government.gov.ru,80,{rand}
+Pravo.gov,POST,pravo.gov.ru,80,{rand}
+gov.ru,POST,gov.ru,80,{rand}
+Zakupki,POST,zakupupki,gov,80,{rand}
+GovData,POST,data.gov.ru,443,{rand}
+GovCouncil,POST,council.gov.ru,80,{rand}
+GovRegulation,POST,regulation.gov.ru,443,{rand}
+GocMinenergo,POST,minenergo.gov.ru,443,{rand}
+GovFAS,POST,en.fas.gov.ru,443,{rand}
+Roskomnadzor,eais.rkn.gov.ru,443,{rand}
+Rosstat,rosstat.gov.ru,443,{rand}
+FAfT,tourism.gov.ru,443,{rand}
