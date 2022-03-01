@@ -29,6 +29,14 @@
     }
   }
 
+  // for multi-tab support
+  window.addEventListener("storage", function () {
+    counter = localStorage.getItem('iCounter') ? JSON.parse(localStorage.getItem('iCounter')) : counter;
+    stats = localStorage.getItem('iStats') ? JSON.parse(localStorage.getItem('iStats')) : stats;
+    refreshCounter();
+    refreshStats();
+  })
+
   var isActive = false
 
   function refreshCounter() {
