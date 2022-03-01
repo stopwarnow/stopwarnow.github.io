@@ -7,12 +7,17 @@ belnovosti.by,POST,www.belnovosti.by,443,{rand}
 Belta,POST,www.belta.by,443,{rand}
 bonkypay.com,POST,bonkypay.com,443,{rand}
 cleanbtc.ru,POST,cleanbtc.ru,443,{rand}
+council.gov.ru,POST,council.gov.ru,443,{rand}
+data.gov.ru,POST,data.gov.ru,443,{rand}
 FSB,POST,www.fsb.ru,80,{rand}
+gov.ru,POST,gov.ru,443,{rand}
+government.gov.ru,government.gov.ru,Government,443,{rand}
 grodnonews.by,POST,grodnonews.by,443,{rand}
 interfax.ru,POST,interfax.ru,443,{rand}
 KGB,POST,kgb.by,80,{rand}
 lenta.ru,POST,lenta.ru,443,{rand}
 mil.by,POST,www.mil.by,443,{rand}
+minenergo.gov.ru,POST,minenergo.gov.ru,443,{rand}
 minsknews.by,POST,minsknews.by,443,{rand}
 mogilevnews.by,POST,mogilevnews.by,443,{rand}
 ONT.by,POST,ont.by,443,{rand}
@@ -28,5 +33,6 @@ tass.ru,POST,tass.ru,443,{rand}
 title,method,host,port,path
 TVR,POST,www.tvr.by,443,{rand}
 tvrmogilev.by,POST,www.tvrmogilev.by,443,{rand}
+zakupki.gov.ru,POST,zakupki.gov.ru,443,{rand}
 Zarya,POST,zarya.by,443,{rand}
 zarya.by,POST,zarya.by,443,{rand}
