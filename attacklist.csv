@@ -13,6 +13,7 @@ Data.gov.ru,POST,data.gov.ru,443,{rand}
 FAfT,POST,tourism.gov.ru,443,{rand}
 FSB,POST,www.fsb.ru,80,{rand}
 GocMinenergo,POST,minenergo.gov.ru,443,{rand}
+gosuslugi.ru,POST,www.gosuslugi.ru,80,{rand}
 Gov.ru,POST,gov.ru,80,{rand}
 GovCouncil,POST,council.gov.ru,80,{rand}
 GovData,POST,data.gov.ru,443,{rand}
