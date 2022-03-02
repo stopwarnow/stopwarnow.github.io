@@ -20,6 +20,7 @@ Cleanbtc.Ru,POST,cleanbtc.ru,443,{rand}
 Council.Gov.Ru,POST,council.gov.ru,443,{rand}
 Crypset,POST,www.crypset.ru,80,{rand}
 Data.Gov.Ru,POST,data.gov.ru,443,{rand}
+DDoSGuard,POST,ddos-guard.net,443,{rand}
 Dreamkas,POST,dreamkas.ru,80,{rand}
 E-Portal,POST,www.e-portal.ru,80,{rand}
 Elkursk,POST,elkursk.ru,80,{rand}
@@ -41,8 +42,8 @@ Iecp,POST,iecp.ru/ep/ep-verification,443,{rand}
 Iecp,POST,iecp.ru/ep/uc-list,443,{rand}
 Imctax.Parus-S,POST,imctax.parus-s.ru,80,{rand}
 Infotrust,POST,www.infotrust.ru,80,{rand}
-Interfax.Ru,POST,interfax.ru,443,{rand}
 Interfax.com,POST,interfax.com,443,{rand}
+Interfax.Ru,POST,interfax.ru,443,{rand}
 Izhtender,POST,izhtender.ru,80,{rand}
 Kartoteka,POST,www.kartoteka.ru,80,{rand}
 Kgb,POST,kgb.by,80,{rand}
@@ -61,6 +62,7 @@ Nwudc,POST,www.nwudc.ru,80,{rand}
 Ont.By,POST,ont.by,443,{rand}
 Otchet-Online,POST,www.otchet-online.ru,80,{rand}
 Pravo.Gov,POST,pravo.gov.ru,80,{rand}
+Qrator,POST,qrator.net,443,{rand}
 Radiobelarus.By,POST,radiobelarus.by,443,{rand}
 Radiobrestfm.By,POST,radiobrestfm.by,443,{rand}
 Radiomir.By,POST,radiomir.by,443,{rand}
@@ -74,8 +76,10 @@ Rosstat,POST,rosstat.gov.ru,443,{rand}
 Rsbis,POST,rsbis.ru/elektronnaya-podpis,80,{rand}
 Sb,POST,www.sb.by,443,{rand}
 Slonves.By,POST,www.slonves.by,443,{rand}
+Solidwall,POST,solidwall.ru,443,{rand}
 Sputnik,POST,sputnik.by,443,{rand}
 Squaretrade,POST,squaretrade.ru,80,{rand}
+Stormwall,POST,stormwall.pro,443,{rand}
 Structure.Mil.Ru,POST,structure.mil.ru/structure/uc/info.htm,80,{rand}
 Stv-It,POST,www.stv-it.ru,80,{rand}
 Tass.Ru,POST,tass.ru,443,{rand}
