@@ -116,6 +116,12 @@ GovernmentServices,POST,www.kgb.by,80,{rand}
 GovernmentServices,POST,www.mvd.gov.by,443,{rand}
 GovernmentServices,POST,www.prokuratura.gov.by,443,{rand}
 GovernmentServices.Ru,POST,minenergo.gov.ru,443,{rand}
+GovernmentServices,POST,mail.rkn.gov.ru,443,{rand}
+GovernmentServices,POST,cloud.rkn.gov.ru,443,{rand}
+GovernmentServices,POST,mvd.gov.ru,443,{rand}
+GovernmentServices,POST,pwd.wto.economy.gov.ru,443,{rand}
+GovernmentServices,POST,stroi.gov.ru,443,{rand}
+GovernmentServices,POST,proverki.gov.ru,443,{rand}
 Icentr,POST,www.icentr.ru,80,{rand}
 Icvibor,POST,www.icvibor.ru,80,{rand}
 Iecp,POST,iecp.ru/ep/ep-verification,443,{rand}
