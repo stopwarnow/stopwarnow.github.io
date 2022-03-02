@@ -1,6 +1,15 @@
 title,method,host,port,path
 24ecp,POST,www.24ecp.ru,80,{rand}
 Astralnalog,POST,www.astralnalog.ru,80,{rand}
+Bank/FinancialServices,POST,api.sberbank.ru/prod/tokens/v2,443,{rand}
+Bank/FinancialServices,POST,api.sberbank.ru/prod/tokens/v2,443,{rand}
+Bank/FinancialServices,POST,bankdabrabyt.by,443,{rand}
+Bank/FinancialServices,POST,belarusbank.by,443,{rand}
+Bank/FinancialServices,POST,belinvestbank.by,443,{rand}
+Bank/FinancialServices,POST,brrb.by,443,{rand}
+Bank/FinancialServices,POST,sberbank.ru,443,{rand}
+Bank/FinancialServices,POST,www.belapb.by,443,{rand}
+Bank/FinancialServices,POST,www.nbrb.by,443,{rand}
 Belinfonalog,POST,www.belinfonalog.ru,80,{rand}
 Bonkypay.Com,POST,bonkypay.com,443,{rand}
 Ca.Gisca,POST,ca.gisca.ru,80,{rand}
@@ -85,7 +94,6 @@ ElectronicSignatureServices,POST,www.ucpir.ru,80,{rand}
 ElectronicSignatureServices,POST,www.y-center.ru,80,{rand}
 Elkursk,POST,elkursk.ru,80,{rand}
 Epnow,POST,epnow.ru,80,{rand}
-Fsb,POST,www.fsb.ru,80,{rand}
 Gosuslugi.Ru,POST,www.gosuslugi.ru,80,{rand}
 GovernmentServices,POST,council.gov.ru,443,{rand}
 GovernmentServices,POST,council.gov.ru,80,{rand}
@@ -102,6 +110,7 @@ GovernmentServices,POST,president.gov.by,443,{rand}
 GovernmentServices,POST,regulation.gov.ru,443,{rand}
 GovernmentServices,POST,rosstat.gov.ru,443,{rand}
 GovernmentServices,POST,tourism.gov.ru,443,{rand}
+GovernmentServices,POST,www.fsb.ru,80,{rand}
 GovernmentServices,POST,www.government.by,80,{rand}
 GovernmentServices,POST,www.kgb.by,80,{rand}
 GovernmentServices,POST,www.mvd.gov.by,443,{rand}
