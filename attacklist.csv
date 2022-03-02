@@ -42,6 +42,7 @@ Iecp,POST,iecp.ru/ep/uc-list,443,{rand}
 Imctax.Parus-S,POST,imctax.parus-s.ru,80,{rand}
 Infotrust,POST,www.infotrust.ru,80,{rand}
 Interfax.Ru,POST,interfax.ru,443,{rand}
+Interfax.com,POST,interfax.com,443,{rand}
 Izhtender,POST,izhtender.ru,80,{rand}
 Kartoteka,POST,www.kartoteka.ru,80,{rand}
 Kgb,POST,kgb.by,80,{rand}
