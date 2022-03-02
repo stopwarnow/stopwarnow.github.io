@@ -78,7 +78,6 @@ ElectronicSignatureServices,POST,www.roseltorg.ru,80,{rand}
 ElectronicSignatureServices,POST,www.stv-it.ru,80,{rand}
 ElectronicSignatureServices,POST,www.ucpir.ru,80,{rand}
 ElectronicSignatureServices,POST,www.y-center.ru,80,{rand}
-Gosuslugi.Ru,POST,www.gosuslugi.ru,80,{rand}
 GovernmentServices,POST,cloud.rkn.gov.ru,443,{rand}
 GovernmentServices,POST,council.gov.ru,443,{rand}
 GovernmentServices,POST,council.gov.ru,80,{rand}
@@ -113,9 +112,6 @@ GovernmentServices,POST,www.nalog.gov.ru,443,{rand}
 GovernmentServices,POST,www.prokuratura.gov.by,443,{rand}
 GovernmentServices,POST,zakupupki.gov,80,{rand}
 GovernmentServices.Ru,POST,minenergo.gov.ru,443,{rand}
-Interfax.com,POST,interfax.com,443,{rand}
-Interfax.Ru,POST,interfax.ru,443,{rand}
-Lenta.Ru,POST,lenta.ru,443,{rand}
 NewsServices,POST,alfaradio.by,443,{rand}
 NewsServices,POST,belarus24.by,443,{rand}
 NewsServices,POST,belmarket.by,443,{rand}
@@ -151,4 +147,8 @@ NewsServices,POST,www.tvrmogilev.by,443,{rand}
 NewsServices,POST,yandex.by,443,{rand}
 NewsServices,POST,yaplakal.com,443,{rand}
 NewsServices,POST,zarya.by,443,{rand}
-Tass.Ru,POST,tass.ru,443,{rand}
+UnknownService,POST,interfax.com,443,{rand}
+UnknownService,POST,interfax.ru,443,{rand}
+UnknownService,POST,lenta.ru,443,{rand}
+UnknownService,POST,tass.ru,443,{rand}
+UnknownService,POST,www.gosuslugi.ru,80,{rand}
