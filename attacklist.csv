@@ -1,4 +1,13 @@
 title,method,host,port,path
+Bank/FinancialServices,POST,3dsec.sberbank.ru.mportal3/auth/login,443,{rand}
+Bank/FinancialServices,POST,acs1.sbrf.ru,443,{rand}
+Bank/FinancialServices,POST,acs2.sbrf.ru,443,{rand}
+Bank/FinancialServices,POST,acs3.sbrf.ru,443,{rand}
+Bank/FinancialServices,POST,acs4.sbrf.ru,443,{rand}
+Bank/FinancialServices,POST,acs5.sbrf.ru,443,{rand}
+Bank/FinancialServices,POST,acs6.sbrf.ru,443,{rand}
+Bank/FinancialServices,POST,acs7.sbrf.ru,443,{rand}
+Bank/FinancialServices,POST,acs8.sbrf.ru,443,{rand}
 Bank/FinancialServices,POST,api.sberbank.ru/prod/tokens/v2,443,{rand}
 Bank/FinancialServices,POST,api.sberbank.ru/prod/tokens/v2,443,{rand}
 Bank/FinancialServices,POST,bankdabrabyt.by,443,{rand}
@@ -6,6 +15,7 @@ Bank/FinancialServices,POST,belarusbank.by,443,{rand}
 Bank/FinancialServices,POST,belinvestbank.by,443,{rand}
 Bank/FinancialServices,POST,brrb.by,443,{rand}
 Bank/FinancialServices,POST,sberbank.ru,443,{rand}
+Bank/FinancialServices,POST,scr.online.sberbank.ru/api/fl/idgib-w-3ds,443,{rand}
 Bank/FinancialServices,POST,www.belapb.by,443,{rand}
 Bank/FinancialServices,POST,www.nbrb.by,443,{rand}
 CryptocurrencyExchangeServices,POST,24paybank.ne,443,{rand}
