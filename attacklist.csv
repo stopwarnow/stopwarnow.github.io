@@ -49,6 +49,7 @@ Kartoteka,POST,www.kartoteka.ru,80,{rand}
 Kgb,POST,kgb.by,80,{rand}
 Kk.Bank/Udts,POST,kk.bank/udts,443,{rand}
 Kraskript,POST,kraskript.com,80,{rand}
+Kremlin,POST,kremlin.ru,443,{rand}
 Kt-69,POST,www.kt-69.ru,80,{rand}
 Lenta.Ru,POST,lenta.ru,443,{rand}
 Mascom-It,POST,mascom-it.ru,80,{rand}
