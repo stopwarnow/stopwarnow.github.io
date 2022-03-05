@@ -90,3 +90,6 @@ Udcs,POST,udcs.ru,80,{rand}
 Y-Center,POST,www.y-center.ru,80,{rand}
 Zakupki,POST,zakupupki.gov,80,{rand}
 Zarya,POST,zarya.by,443,{rand}
+ddos-guard.net,POST,ddos-guard.net,443,{rand}
+ddos-guard.net,POST,185.178.208.65,443,{rand}
+b2b.sibur.ru,POST,b2b.sibur.ru,443,{rand}
