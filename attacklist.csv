@@ -79,6 +79,8 @@ Squaretrade,POST,squaretrade.ru,80,{rand}
 Structure.Mil.Ru,POST,structure.mil.ru/structure/uc/info.htm,80,{rand}
 Stv-It,POST,www.stv-it.ru,80,{rand}
 Tass.Ru,POST,tass.ru,443,{rand}
+transneft,POST,www.transneft.ru,443,{rand}
+tektorg,POST,www.tektorg.ru,443,{rand}
 Tvr,POST,www.tvr.by,443,{rand}
 Tvrmogilev,POST,www.tvrmogilev.by,443,{rand}
 Uc-Osnovanie,POST,uc-osnovanie.ru/,443,{rand}
