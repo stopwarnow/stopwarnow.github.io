@@ -90,3 +90,14 @@ Udcs,POST,udcs.ru,80,{rand}
 Y-Center,POST,www.y-center.ru,80,{rand}
 Zakupki,POST,zakupupki.gov,80,{rand}
 Zarya,POST,zarya.by,443,{rand}
+vk.ru,POST,lukoil.ru,443,{rand}
+vk.com,POST,vk.com,443,{rand}
+ok.ru,POST,ok.ru,443,{rand}
+lukoil.com,POST,lukoil.com,443,{rand}
+sber-am.ru,POST,sber-am.ru,443,{rand}
+region-am.ru,POST,region-am.ru,443,{rand}
+www.ingosinvest.ru,POST,www.ingosinvest.ru,443,{rand}
+star-pro.ru,POST,star-pro.ru,443,{rand}
+region.ru,POST,region.ru,443,{rand}
+ul.su,POST,ul.su,443,{rand}
+gruzovozkin.pro,POST,gruzovozkin.pro,443,{rand}
