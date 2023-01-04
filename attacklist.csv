@@ -61,6 +61,7 @@ Nwudc,POST,www.nwudc.ru,80,{rand}
 Ont.By,POST,ont.by,443,{rand}
 Otchet-Online,POST,www.otchet-online.ru,80,{rand}
 Pravo.Gov,POST,pravo.gov.ru,80,{rand}
+Presidentialgrants, POST,президентскиегранты.рф,443,{rand}
 Radiobelarus.By,POST,radiobelarus.by,443,{rand}
 Radiobrestfm.By,POST,radiobrestfm.by,443,{rand}
 Radiomir.By,POST,radiomir.by,443,{rand}
