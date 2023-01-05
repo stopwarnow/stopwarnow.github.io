@@ -56,11 +56,13 @@ Mil.By,POST,www.mil.by,443,{rand}
 Minenergo.Gov.Ru,POST,minenergo.gov.ru,443,{rand}
 Minsknews.By,POST,minsknews.by,443,{rand}
 Mogilevnews.By,POST,mogilevnews.by,443,{rand}
+Molodaya Respublica,POST,mrespublika.ru, 443,{rand}
 Nucrf,POST,www.nucrf.ru,80,{rand}
 Nwudc,POST,www.nwudc.ru,80,{rand}
 Ont.By,POST,ont.by,443,{rand}
 Otchet-Online,POST,www.otchet-online.ru,80,{rand}
 Pravo.Gov,POST,pravo.gov.ru,80,{rand}
+Presidentialgrants, POST,президентскиегранты.рф,443,{rand}
 Radiobelarus.By,POST,radiobelarus.by,443,{rand}
 Radiobrestfm.By,POST,radiobrestfm.by,443,{rand}
 Radiomir.By,POST,radiomir.by,443,{rand}
